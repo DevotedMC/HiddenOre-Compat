@@ -1,0 +1,4 @@
+name: '${project.name}'
+version: '${project.version}'
+main: com.github.devotedmc.hiddenorecompat.HiddenOreCompat
+author: ProgrammerDan
