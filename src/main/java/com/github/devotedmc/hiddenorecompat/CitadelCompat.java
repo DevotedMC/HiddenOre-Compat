@@ -32,7 +32,6 @@ public class CitadelCompat implements Listener {
 		ReinforcementManager rm = Citadel.getReinforcementManager();
 		Reinforcement rein = rm.getReinforcement(hoge.getBlock());
 		if (rein != null) {
-			Bukkit.getLogger().log(Level.INFO, "Blocking ore gen at ", hoge.getBlock().getLocation());
 			hoge.setCancelled(true);
 		}
 	}

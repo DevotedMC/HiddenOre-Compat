@@ -25,11 +25,15 @@ public class HiddenOreCompat extends JavaPlugin implements Listener {
 			this.getLogger().log(Level.INFO, "Preparing HiddenOre-Citadel compatibility extender");
 			citadel = new CitadelCompat();
 			manager.registerEvents(citadel, this);
+		} else {
+			this.getLogger().log(Level.INFO, "HiddenOre-Citadel compatibility skipped.");
 		}
 		if (manager.isPluginEnabled("Orebfuscator4")) {
 			this.getLogger().log(Level.INFO, "Preparing HiddenOre-Orebfuscator compatibility extender");
 			orebfuscator = new OrebfuscatorCompat();
 			manager.registerEvents(orebfuscator, this);
+		} else {
+			this.getLogger().log(Level.INFO, "HiddenOre-Orebfuscator compatibility skipped.");
 		}
 	}
 }
