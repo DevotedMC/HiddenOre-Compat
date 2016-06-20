@@ -1,5 +1,8 @@
 package com.github.devotedmc.hiddenorecompat;
 
+import java.util.logging.Level;
+
+import org.bukkit.Bukkit;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.EventPriority;
 import org.bukkit.event.Listener;
@@ -29,6 +32,7 @@ public class CitadelCompat implements Listener {
 		ReinforcementManager rm = Citadel.getReinforcementManager();
 		Reinforcement rein = rm.getReinforcement(hoge.getBlock());
 		if (rein != null) {
+			Bukkit.getLogger().log(Level.INFO, "Blocking ore gen at ", hoge.getBlock().getLocation());
 			hoge.setCancelled(true);
 		}
 	}

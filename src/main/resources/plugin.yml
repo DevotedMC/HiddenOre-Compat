@@ -2,3 +2,5 @@ name: '${project.name}'
 version: '${project.version}'
 main: com.github.devotedmc.hiddenorecompat.HiddenOreCompat
 author: ProgrammerDan
+depend: [HiddenOre]
+softdepend: [Orebfuscator4, Citadel]

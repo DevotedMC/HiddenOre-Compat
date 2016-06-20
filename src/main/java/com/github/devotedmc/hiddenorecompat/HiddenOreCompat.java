@@ -1,5 +1,7 @@
 package com.github.devotedmc.hiddenorecompat;
 
+import java.util.logging.Level;
+
 import org.bukkit.event.Listener;
 import org.bukkit.plugin.PluginManager;
 import org.bukkit.plugin.java.JavaPlugin;
@@ -20,10 +22,12 @@ public class HiddenOreCompat extends JavaPlugin implements Listener {
 	public void onEnable() {
 		PluginManager manager = this.getServer().getPluginManager();
 		if (manager.isPluginEnabled("Citadel")) {
+			this.getLogger().log(Level.INFO, "Preparing HiddenOre-Citadel compatibility extender");
 			citadel = new CitadelCompat();
 			manager.registerEvents(citadel, this);
 		}
 		if (manager.isPluginEnabled("Orebfuscator4")) {
+			this.getLogger().log(Level.INFO, "Preparing HiddenOre-Orebfuscator compatibility extender");
 			orebfuscator = new OrebfuscatorCompat();
 			manager.registerEvents(orebfuscator, this);
 		}
