@@ -6,41 +6,51 @@
 
     <groupId>com.github.devotedmc</groupId>
     <artifactId>hiddenore-compat</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>0.0.2-SNAPSHOT</version>
     <name>HiddenOre-Compat</name>
 
-	<repositories>
-		<repository>
-			<id>spigot-repo</id>
-			<url>https://hub.spigotmc.org/nexus/content/groups/public/</url>
-		</repository>
-	</repositories>
+    <repositories>
+	<repository>
+		<id>devoted-repo</id>
+		<url>https://build.devotedmc.com/plugin/repository/everything/</url>
+	</repository>
+	<repository>
+		<id>spigot-repo</id>
+		<url>https://hub.spigotmc.org/nexus/content/groups/public/</url>
+	</repository>
+    </repositories>
 
     <dependencies>
-        <dependency>
-            <groupId>org.spigotmc</groupId>
-            <artifactId>spigot-api</artifactId>
-            <version>1.10-R0.1-SNAPSHOT</version>
-			<scope>provided</scope>
-        </dependency>
-		<dependency>
-			<groupId>com.github.devotedmc</groupId>
-			<artifactId>hiddenore</artifactId>
-			<version>1.2.0</version>
-			<scope>provided</scope>
-		</dependency>
-		<dependency>
-			<groupId>com.lishid</groupId>
-			<artifactId>orebfuscator</artifactId>
-			<version>4.1.1-SNAPSHOT</version>
-			<scope>provided</scope>
-		</dependency>		
-		<dependency>
-			<groupId>vg.civcraft.mc.citadel</groupId>
-			<artifactId>Citadel</artifactId>
-			<version>3.5.2</version>
-			<scope>provided</scope>
-		</dependency>
+	<dependency>
+		<groupId>org.spigotmc</groupId>
+		<artifactId>spigot-api</artifactId>
+		<version>1.12.2-R0.1-SNAPSHOT</version>
+		<scope>provided</scope>
+	</dependency>
+	<dependency>
+		<groupId>com.github.devotedmc</groupId>
+		<artifactId>hiddenore</artifactId>
+		<version>1.4.2</version>
+		<scope>provided</scope>
+	</dependency>
+	<dependency>
+		<groupId>com.lishid</groupId>
+		<artifactId>orebfuscator</artifactId>
+		<version>4.3.3</version>
+		<scope>provided</scope>
+	</dependency>		
+	<dependency>
+		<groupId>vg.civcraft.mc.citadel</groupId>
+		<artifactId>Citadel</artifactId>
+		<version>3.11.4</version>
+		<scope>provided</scope>
+	</dependency>
+	<dependency>
+		<groupId>vg.civcraft.mc.civmodcore</groupId>
+		<artifactId>CivModCore</artifactId>
+		<version>1.6.1</version>
+		<scope>compile</scope>
+	</dependency>
     </dependencies>
 
     <build>
@@ -57,8 +67,8 @@
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>3.5.1</version>
                 <configuration>
-                    <source>1.7</source>
-                    <target>1.7</target>
+                    <source>1.8</source>
+                    <target>1.8</target>
                 </configuration>
             </plugin>
         </plugins>
