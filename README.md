@@ -6,12 +6,12 @@ This plugin uses the event system from HiddenOre to make HiddenOre fully compati
 
 Compatible with:
 
-* CivModCore 1.6.1 (compile)
+* CivModCore 1.8.1 (compile)
 
-* HiddenOre 1.4.2
+* HiddenOre 1.7.1
 
-* Orebfuscator 4.1.1 or later (Not before -- function didn't exist before)
+* (temporarily) No Orebfuscator support (update function was removed by present maintainers)
 
-* Citadel 3.11.4 or later
+* Citadel 4.1.1 or later
 
-This particular release was compiled for Spigot 1.12.2. 
+This particular release was compiled for Spigot 1.16.4. 
