@@ -1,16 +1,11 @@
 package com.github.devotedmc.hiddenorecompat;
 
-import java.util.logging.Level;
-
-import org.bukkit.Bukkit;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.EventPriority;
 import org.bukkit.event.Listener;
-
 import vg.civcraft.mc.citadel.Citadel;
 import vg.civcraft.mc.citadel.ReinforcementManager;
-import vg.civcraft.mc.citadel.reinforcement.Reinforcement;
-
+import vg.civcraft.mc.citadel.model.Reinforcement;
 import com.github.devotedmc.hiddenore.events.HiddenOreGenerateEvent;
 
 /**
@@ -29,7 +24,7 @@ public class CitadelCompat implements Listener {
 	 */
 	@EventHandler(priority=EventPriority.HIGHEST, ignoreCancelled = true)
 	public void captureHiddenOreGenerate(HiddenOreGenerateEvent hoge) {
-		ReinforcementManager rm = Citadel.getReinforcementManager();
+		ReinforcementManager rm = Citadel.getInstance().getReinforcementManager();
 		Reinforcement rein = rm.getReinforcement(hoge.getBlock());
 		if (rein != null) {
 			hoge.setCancelled(true);

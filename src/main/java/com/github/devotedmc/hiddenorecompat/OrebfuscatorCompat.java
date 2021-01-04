@@ -9,9 +9,11 @@ import org.bukkit.event.EventPriority;
 import org.bukkit.event.Listener;
 
 import com.github.devotedmc.hiddenore.events.HiddenOreEvent;
-import com.lishid.orebfuscator.obfuscation.BlockUpdate;
+//import com.lishid.orebfuscator.obfuscation.BlockUpdate;
 
 /**
+ * TODO latest Orebfuscator does not appear to expose an equiv notification option. 
+ * 
  * Handles the standard hiddenore break event, and triggers an orebfuscator
  * update when one is called.
  * 
@@ -24,8 +26,8 @@ public class OrebfuscatorCompat implements Listener {
 	 */
 	@EventHandler(priority=EventPriority.HIGHEST, ignoreCancelled=true)
 	public void captureHiddenOreBreak(HiddenOreEvent hoe) {
-		List<Location> L= new ArrayList<Location>(1);
+		/*List<Location> L= new ArrayList<Location>(1);
 		L.add(hoe.getDropLocation());
-		BlockUpdate.updateByLocations(L, 1);
+		BlockUpdate.updateByLocations(L, 1);*/
 	}
 }

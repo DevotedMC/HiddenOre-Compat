@@ -16,7 +16,7 @@ import org.bukkit.plugin.java.JavaPlugin;
 public class HiddenOreCompat extends JavaPlugin implements Listener {
 
 	CitadelCompat citadel = null;
-	OrebfuscatorCompat orebfuscator = null;
+	//OrebfuscatorCompat orebfuscator = null;
 	
 	@Override
 	public void onEnable() {
@@ -28,12 +28,13 @@ public class HiddenOreCompat extends JavaPlugin implements Listener {
 		} else {
 			this.getLogger().log(Level.INFO, "HiddenOre-Citadel compatibility skipped.");
 		}
-		if (manager.isPluginEnabled("Orebfuscator4")) {
+		/* TODO: Orebfuscator is not exposing an interface for compat yet?
+		  if (manager.isPluginEnabled("Orebfuscator4")) {
 			this.getLogger().log(Level.INFO, "Preparing HiddenOre-Orebfuscator compatibility extender");
 			orebfuscator = new OrebfuscatorCompat();
 			manager.registerEvents(orebfuscator, this);
 		} else {
 			this.getLogger().log(Level.INFO, "HiddenOre-Orebfuscator compatibility skipped.");
-		}
+		}*/
 	}
 }
